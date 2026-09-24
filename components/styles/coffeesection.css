@@ -1,0 +1,159 @@
+.coffee-section {
+    width: 100%;
+    min-height: 720px;
+    position: relative;
+    background-color: #fff;
+    overflow: hidden;
+    padding: 180px clamp(24px, 10vw, 160px) 140px;
+    text-align: left;
+}
+
+.top-drip {
+    width: 100%;
+    height: auto;
+    max-height: 220px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.bottom-splash {
+    position: absolute;
+    bottom: -60px;
+    left: -40px;
+    width: clamp(180px, 28vw, 420px);
+    max-width: 45%;
+    height: auto;
+}
+
+.coffee-content {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 1fr);
+    gap: clamp(30px, 6vw, 100px);
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.text-area {
+    min-width: 0;
+}
+
+.text-area h2 {
+    max-width: 520px;
+    color: #5c3b1e;
+    font-size: clamp(2.2rem, 4vw, 3.5rem);
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.text-area p {
+    color: #555;
+    max-width: 580px;
+    font-size: clamp(1rem, 1.4vw, 1.25rem);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.learn-btn {
+    background-color: #f5b841;
+    border: none;
+    color: #333;
+    font-size: 1.1rem;
+    font-weight: 400;
+    padding: 10px 25px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.learn-btn:hover {
+    background-color: #d89e36;
+}
+
+.image-area img {
+    display: block;
+    width: 100%;
+    max-width: 540px;
+    height: auto;
+    margin: 0 auto;
+}
+.image-area {
+    position: relative;
+    min-width: 0;
+}
+
+@media (max-width: 900px) {
+    .coffee-content {
+        grid-template-columns: minmax(0, 1.1fr) minmax(220px, 0.9fr);
+        gap: 30px;
+    }
+
+    .text-area h2 {
+        font-size: clamp(2rem, 5vw, 2.8rem);
+    }
+
+    .text-area p {
+        font-size: 1.05rem;
+    }
+
+    .coffee-section {
+        padding-right: 7vw;
+        padding-left: 7vw;
+    }
+}
+
+@media (max-width: 640px) {
+    .coffee-section {
+        min-height: 0;
+        padding: 130px 20px 150px;
+        text-align: center;
+    }
+
+    .top-drip {
+        max-height: 130px;
+    }
+
+    .coffee-content {
+        display: flex;
+        flex-direction: column;
+        gap: 36px;
+    }
+
+    .text-area,
+    .text-area h2,
+    .text-area p {
+        width: 100%;
+        max-width: none;
+    }
+
+    .text-area h2 {
+        font-size: clamp(2rem, 9vw, 2.6rem);
+        margin-bottom: 14px;
+    }
+
+    .text-area p {
+        font-size: 1rem;
+        line-height: 1.65;
+        margin-bottom: 22px;
+    }
+
+    .image-area img {
+        max-width: 100%;
+    }
+
+    .learn-btn {
+        font-size: 1rem;
+        padding: 10px 22px;
+        border-radius: 20px;
+    }
+
+    .bottom-splash {
+        bottom: -25px;
+        left: -55px;
+        width: 230px;
+        max-width: none;
+    }
+}

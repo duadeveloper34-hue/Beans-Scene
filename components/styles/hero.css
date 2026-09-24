@@ -1,0 +1,75 @@
+.hero {
+    background-image: url('/images/hero-section.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-family: "Poppins", sans-serif;
+}
+
+.hero-content {
+    max-width: 600px;
+    margin-left: 100px;
+}
+
+.hero h3 {
+    font-weight: 400;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.hero h1 {
+    font-family: "Dancing Script", cursive;
+    font-size: 100px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+.order-btn {
+    background-color: #f5b841;
+    color: black;
+    font-size: 18px;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    /* font-weight: bold; */
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.order-btn:hover {
+    background-color: #d89e36;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        height: auto;
+        padding: 50px 20px;
+        text-align: center;
+    }
+
+    .hero-content {
+        margin: 0 auto;
+    }
+
+    .hero h1 {
+        font-size: 60px;
+    }
+    .hero h3 {
+        font-size: 16px;
+    }
+    .hero p {
+        font-size: 14px;
+    }
+    .order-btn {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+}

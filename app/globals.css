@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: 'Poppins', sans-serif; */
+}
+
+/* styles/global.css */
+.coffee-menu {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+  padding: clamp(48px, 7vw, 90px) clamp(16px, 5vw, 60px);
+}
+
+.coffee-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
+  gap: clamp(18px, 3vw, 30px);
+  margin: 32px auto 0;
+  width: 100%;
+}
+
+.coffee-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fef6e4;
+  width: 100%;
+  min-width: 0;
+  border: 1.5px solid #fa7b04;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding-bottom: 24px;
+  transition: transform 0.3s ease;
+}
+
+.coffee-img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  height: auto;
+  object-fit: cover;
+}
+
+.coffee-menu h2 {
+  max-width: 720px;
+  margin: 0 auto 16px;
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  line-height: 1.15;
+  color: #5c3d2e;
+}
+.para {
+  max-width: 680px;
+  margin: 0 auto;
+  font-size: clamp(1rem, 2vw, 1.125rem);
+  line-height: 1.6;
+  color: #7a5c43;
+}
+
+.coffee-card h3 {
+  margin: 16px 12px 6px;
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+  line-height: 1.25;
+  color: #5c3d2e;
+}
+
+.coffee-card > p:not(.price) {
+  margin: 0 12px;
+  color: #7a5c43;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.price {
+  margin-top: 10px;
+  color: #5c3d2e;
+  font-weight: bold;
+}
+
+.coffee-card .order-btn {
+  background-color: #f5b841;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+.coffee-card .order-btn:hover {
+  background-color: #d89e36;
+}
+
+.coffee-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 600px) {
+  .coffee-menu {
+    padding-top: 48px;
+    padding-bottom: 56px;
+  }
+
+  .coffee-grid {
+    grid-template-columns: 1fr;
+    max-width: 360px;
+    gap: 24px;
+    margin-top: 26px;
+  }
+
+  .coffee-card .order-btn {
+    min-width: 150px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .coffee-card {
+    transition: none;
+  }
+
+  .coffee-card:hover {
+    transform: none;
+  }
+}

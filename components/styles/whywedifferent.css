@@ -1,0 +1,195 @@
+.why-section {
+  width: 100%;
+  text-align: center;
+  background-color: #fffaf3;
+  padding: clamp(56px, 8vw, 96px) clamp(16px, 5vw, 60px);
+  position: relative;
+  overflow: hidden;
+}
+
+.why-header {
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
+  margin: 0 auto clamp(34px, 5vw, 50px);
+}
+
+.splash-img {
+  display: block;
+}
+
+.why-header h2 {
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  line-height: 1.15;
+  font-weight: 700;
+  color: #4a2c1a;
+}
+
+.why-header p {
+  font-size: clamp(1rem, 2vw, 1.125rem);
+  line-height: 1.5;
+  color: #777;
+  margin-top: 8px;
+}
+
+.splash-img {
+  position: absolute;
+  top: clamp(-110px, -14vw, -40px);
+  right: clamp(-216px, -30vw, -45px);
+  width: clamp(230px, 34vw, 450px);
+  height: auto;
+  z-index: 0;
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+.why-cards {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(16px, 2.5vw, 25px);
+  width: 100%;
+  max-width: 1060px;
+  margin: 0 auto clamp(42px, 6vw, 64px);
+}
+
+.why-section .card {
+  min-width: 0;
+  background-color: #fff2e1;
+  border: 1px solid #e3c7a8;
+  border-radius: 10px;
+  padding: clamp(20px, 3vw, 30px) 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.why-section .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.why-section .card svg {
+  color: #5a3210;
+  width: clamp(64px, 7vw, 88px);
+  height: clamp(64px, 7vw, 88px);
+  margin-bottom: 15px;
+}
+
+.why-section .card h3 {
+  color: #5a3210;
+  font-size: clamp(1.1rem, 2vw, 1.25rem);
+  line-height: 1.25;
+  margin-bottom: 5px;
+}
+
+.why-section .card p {
+  color: #777;
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
+  line-height: 1.45;
+}
+
+.cta h2 {
+  font-size: clamp(2.25rem, 6vw, 3rem);
+  line-height: 1.1;
+  color: #4a2c1a;
+}
+
+.cta p {
+  font-size: clamp(1rem, 2vw, 1.125rem);
+  line-height: 1.5;
+  color: #777;
+  margin-bottom: 15px;
+}
+
+.cta button {
+  font-size: 18px;
+  background-color: #f5b841;
+  border: none;
+  padding: 12px 30px;
+  color: #333;
+  font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta button:hover {
+  background-color: #d89e36;
+}
+
+@media (max-width: 900px) {
+  .why-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 680px;
+  }
+
+  .splash-img {
+    width: clamp(220px, 38vw, 320px);
+  }
+}
+
+@media (max-width: 560px) {
+  .why-section {
+    padding-top: 52px;
+    padding-bottom: 58px;
+  }
+
+  .why-cards {
+    grid-template-columns: 1fr;
+    max-width: 360px;
+    gap: 16px;
+    margin-bottom: 42px;
+  }
+
+  .splash-img {
+    position: static;
+    order: -1;
+    width: min(210px, 70vw);
+    margin: 0 auto 12px;
+    opacity: 0.9;
+  }
+
+  .why-header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .why-section .card {
+    padding: 22px 18px;
+  }
+
+  .why-section .card svg {
+    width: 72px;
+    height: 72px;
+  }
+
+  .why-section .card h3 {
+    font-size: 1.2rem;
+  }
+
+  .cta h2 {
+    font-size: clamp(2rem, 10vw, 2.5rem);
+  }
+
+  .cta p {
+    max-width: 340px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .cta button {
+    font-size: 16px;
+    padding: 10px 25px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .why-section .card,
+  .cta button {
+    transition: none;
+  }
+
+  .why-section .card:hover {
+    transform: none;
+  }
+}

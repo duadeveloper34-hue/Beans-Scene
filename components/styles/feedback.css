@@ -1,0 +1,130 @@
+.feedback-section {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(52px, 8vw, 88px) clamp(16px, 5vw, 60px);
+  text-align: center;
+  background: #fff;
+}
+
+.feedback-title {
+  position: relative;
+  z-index: 2;
+  margin: 0 0 10px;
+  color: #5a3100;
+  font-size: clamp(2rem, 5vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.feedback-subtitle {
+  position: relative;
+  z-index: 2;
+  margin: 0 auto 40px;
+  color: #7a6b5d;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  line-height: 1.5;
+}
+
+.feedback-box {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: clamp(30px, 5vw, 50px) clamp(18px, 4vw, 30px);
+  overflow: hidden;
+  border: 1px solid #f3d9b0;
+  border-radius: 10px;
+  background-color: #fff6ec;
+}
+
+.left-splash,
+.right-splash {
+  position: absolute;
+  z-index: 0;
+  height: auto;
+  pointer-events: none;
+}
+
+.left-splash {
+  top: clamp(20px, 5vw, 50px);
+  left: clamp(-140px, -10vw, -60px);
+  width: clamp(220px, 30vw, 450px);
+  /* opacity: 0.8; */
+}
+
+.right-splash {
+  top: 15px;
+  right: clamp(-120px, -9vw, -50px);
+  width: clamp(220px, 28vw, 406px);
+  /* opacity: 0.8; */
+}
+
+.feedback-text {
+  position: relative;
+  z-index: 2;
+  max-width: 720px;
+  margin: 0 auto;
+  color: #555;
+  font-size: clamp(1rem, 2vw, 1.4rem);
+  line-height: 1.8;
+}
+
+.feedback-user {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.user-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.feedback-user h4 {
+  margin: 0;
+  color: #5a3100;
+}
+
+.feedback-user p {
+  margin: 0;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .left-splash,
+  .right-splash {
+    width: 150px;
+    opacity: 0.8;
+  }
+
+  .feedback-box {
+    padding: 30px 20px;
+  }
+
+  .feedback-text {
+    line-height: 1.65;
+  }
+}
+
+@media (max-width: 480px) {
+  .feedback-subtitle {
+    margin-bottom: 28px;
+  }
+
+  .feedback-text {
+    font-size: 0.95rem;
+    line-height: 1.55;
+  }
+
+  .feedback-user {
+    margin-top: 24px;
+  }
+}

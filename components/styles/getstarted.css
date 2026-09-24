@@ -1,0 +1,146 @@
+* {
+  box-sizing: border-box;
+}
+
+.get {
+  position: relative; /* important for overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("/images/coffee-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: clamp(620px, 90vh, 820px);
+  color: white;
+  padding: clamp(48px, 7vw, 84px) clamp(20px, 6vw, 80px);
+}
+
+/* 👇 overlay ka magic */
+.get::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(65, 33, 7, 0.7); /* brown transparent layer */
+  z-index: 1;
+}
+
+/* taake content overlay ke upar show ho */
+.get-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(32px, 7vw, 100px);
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.get-left {
+  flex: 1 1 45%;
+  min-width: 0;
+  text-align: center;
+}
+
+.get-left img {
+  display: block;
+  width: min(100%, 450px);
+  height: auto;
+  margin: 0 auto;
+}
+
+.get-right {
+  flex: 1 1 55%;
+  max-width: 550px;
+}
+
+.get-right h1 {
+  margin: 0;
+  font-size: clamp(2.25rem, 4.5vw, 3rem);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.get-right span {
+  color: #f6b25f;
+}
+
+.get-right p {
+  font-size: clamp(1rem, 1.6vw, 1.1875rem);
+  font-weight: 400;
+  margin-top: 20px;
+  line-height: 1.7;
+  color: #f1e6d0;
+}
+
+.get-right button {
+  margin-top: 25px;
+  padding: 12px 24px;
+  background-color: #f6b25f;
+  border: none;
+  border-radius: 25px;
+  font-size: clamp(1rem, 1.6vw, 1.1875rem);
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.get-right button:hover {
+  background-color: #e29b42;
+}
+
+@media (max-width: 900px) {
+  .get {
+    min-height: auto;
+  }
+
+  .get-content {
+    gap: 36px;
+  }
+
+  .get-right h1 {
+    font-size: clamp(2rem, 5vw, 2.75rem);
+  }
+}
+
+@media (max-width: 680px) {
+  .get {
+    padding-top: 56px;
+    padding-bottom: 64px;
+  }
+
+  .get-content {
+    flex-direction: column;
+    gap: 34px;
+    text-align: center;
+  }
+
+  .get-left,
+  .get-right {
+    flex-basis: auto;
+    width: 100%;
+    max-width: 540px;
+  }
+
+  .get-left img {
+    width: min(78vw, 340px);
+  }
+
+  .get-right h1 br {
+    display: none;
+  }
+
+  .get-right p {
+    line-height: 1.6;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .get-right button {
+    transition: none;
+  }
+}
